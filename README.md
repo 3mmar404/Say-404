@@ -6,8 +6,6 @@
 
 🔗 **Live Demo:** [Put Your GitHub Pages Link Here]
 
-![Project Banner](https://via.placeholder.com/1000x300/121212/FF9800?text=Say+404+Preview)
-
 ## ✨ Key Features
 
 * **🌍 Multi-Language Support:** Instant translation for scripts in English, Italian, German, Russian, and Spanish.
@@ -45,4 +43,5 @@ Contributions are welcome! If you have new scripts or activities to add:
 3.  Submit a Pull Request.
 
 ---
+
 Developed with Amar ❤️ for Animators.
