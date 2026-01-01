@@ -4,7 +4,7 @@
 
 **Say 404** is a Progressive Web App (PWA) designed to help animation teams break language barriers and manage daily activities efficiently. Whether you need a script in Italian, a stretching routine, or a quick Zumba playlist, Say 404 has you covered—even offline.
 
-🔗 **Live Demo:** [Put Your GitHub Pages Link Here]
+🔗 **Live Demo:** [https://3mmar404.github.io/Say-404/]
 
 ## ✨ Key Features
 
@@ -45,3 +45,4 @@ Contributions are welcome! If you have new scripts or activities to add:
 ---
 
 Developed with Amar ❤️ for Animators.
+
