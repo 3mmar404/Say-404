@@ -496,45 +496,44 @@ document.addEventListener('DOMContentLoaded', () => {
         return div;
     }
 
-    // --- التعديل: فلتر الأقواس في دالة النطق ---
+    // --- التعديل: فلتر الأقواس واختيار أفضل جودة صوت ---
     function speakText(text, lang) {
-        // 1. Stop any current speech
-        window.speechSynthesis.cancel();
+        window.speechSynthesis.cancel(); // إيقاف أي نطق شغال
 
         // تنظيف النص من أي شيء بين الأقواس ()
         const cleanText = text.replace(/\([^)]*\)/g, '').trim();
 
-        // 2. Define the target language code clearly
         const targetLang = TTS_CODES[lang] || 'en-US';
-
-        // 3. Setup the utterance with the cleaned text
         const utterance = new SpeechSynthesisUtterance(cleanText);
-        utterance.lang = targetLang; // This alone helps iOS sometimes
-        utterance.rate = 0.9; // Slightly slower is better for learning
+        utterance.lang = targetLang; 
+        utterance.rate = 0.9; 
 
-        // 4. SMART VOICE SELECTION (Mobile Optimized)
-        // Re-fetch voices instantly (Crucial for mobile Safari/Chrome)
+        // التحديث الذكي لاختيار الصوت
         let voices = window.speechSynthesis.getVoices();
         
-        // Strategy A: Exact Match (e.g., it-IT)
-        let selectedVoice = voices.find(v => v.lang === targetLang);
-
-        // Strategy B: General Match (e.g., 'it' inside 'it-IT')
-        if (!selectedVoice) {
-            const shortCode = targetLang.split('-')[0]; // 'it' from 'it-IT'
-            selectedVoice = voices.find(v => v.lang.startsWith(shortCode));
+        if (voices.length > 0) {
+            // فلترة الأصوات عشان نجيب أصوات اللغة المطلوبة بس (مثلاً الإيطالي)
+            let matchingVoices = voices.filter(v => v.lang.startsWith(targetLang.split('-')[0]));
+            
+            if (matchingVoices.length > 0) {
+                // البحث عن الصوت عالي الجودة (Premium, Enhanced, Natural, Online)
+                let bestVoice = matchingVoices.find(v => 
+                    v.name.toLowerCase().includes('premium') || 
+                    v.name.toLowerCase().includes('enhanced') || 
+                    v.name.toLowerCase().includes('online') ||
+                    v.name.toLowerCase().includes('natural')
+                );
+                
+                // لو ملقاش كلمة Premium، ياخد "آخر" صوت في القائمة (لأن الموبايل بيحط الأصوات الجديدة في الآخر)
+                // ولو ملقاش خالص، يسيب الموبايل يختار براحته
+                if (bestVoice) {
+                    utterance.voice = bestVoice;
+                } else {
+                    utterance.voice = matchingVoices[matchingVoices.length - 1]; 
+                }
+            }
         }
 
-        // Strategy C: iOS Fallback (Don't force voice if not found, rely on lang prop)
-        if (selectedVoice) {
-            utterance.voice = selectedVoice;
-            console.log('Voice found:', selectedVoice.name);
-        } else {
-            console.warn('No voice found for', targetLang, '- Relying on OS default');
-            // iOS tries to match 'utterance.lang' automatically if we don't force a bad voice
-        }
-
-        // 5. Speak
         window.speechSynthesis.speak(utterance);
     }
 
