@@ -106,8 +106,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // رأس الموديول
             const modHeader = document.createElement('div');
             modHeader.className = 'level-1-header';
+            
+            // التعديل: إضافة العنوان العربي للموديول لو موجود
+            const modTitleAr = mod.title_ar ? `<span style="font-size: 0.85em; color: var(--text-dim); margin-left: 10px; font-family: 'Tahoma', sans-serif;" dir="rtl">${mod.title_ar}</span>` : '';
+            
             modHeader.innerHTML = `
-                <h3 class="level-1-title">${mod.title}</h3>
+                <div style="display: flex; align-items: center; flex-wrap: wrap;">
+                    <h3 class="level-1-title">${mod.title}</h3>
+                    ${modTitleAr}
+                </div>
                 <span class="toggle-icon">▼</span>
             `;
             // وظيفة الضغط
@@ -121,9 +128,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             mod.categories.forEach(cat => {
                 // فلترة الجمل داخل الكاتيجوري
-                const filteredPhrases = cat.phrases.filter(phrase => 
-                    phrase.toLowerCase().includes(query)
-                );
+                const filteredPhrases = cat.phrases.filter(phrase => {
+                    let textToSearch = typeof phrase === 'object' ? (phrase.text + ' ' + (phrase.meaning || '')).toLowerCase() : phrase.toLowerCase();
+                    return textToSearch.includes(query);
+                });
 
                 if (filteredPhrases.length > 0) {
                     hasVisibleCategories = true;
@@ -136,8 +144,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     // رأس الكاتيجوري
                     const catHeader = document.createElement('div');
                     catHeader.className = 'level-2-header';
+                    
+                    // التعديل: إضافة العنوان العربي للكاتيجوري لو موجود
+                    const catTitleAr = cat.title_ar ? `<span style="font-size: 0.8em; color: #999; margin-left: 10px; font-family: 'Tahoma', sans-serif;" dir="rtl">${cat.title_ar}</span>` : '';
+                    
                     catHeader.innerHTML = `
-                        <h4 class="level-2-title">${cat.title}</h4>
+                        <div style="display: flex; align-items: center; flex-wrap: wrap;">
+                            <h4 class="level-2-title">${cat.title}</h4>
+                            ${catTitleAr}
+                        </div>
                         <span class="toggle-icon">▼</span>
                     `;
                     catHeader.addEventListener('click', (e) => {
@@ -149,9 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     const phrasesDiv = document.createElement('div');
                     phrasesDiv.className = 'level-2-content';
 
-                    filteredPhrases.forEach(text => {
-                        // هنا السكريبت مفيهوش عربي في ملف JSON الحالي، فبنعرض النص بس
-                        const card = createCard(text, true, currentLang); 
+                    filteredPhrases.forEach(item => {
+                        const card = createCard(item, true, currentLang); 
                         phrasesDiv.appendChild(card);
                     });
 
@@ -429,15 +443,37 @@ document.addEventListener('DOMContentLoaded', () => {
         return div;
     }
 
-    function createCard(text, withAudio = false, langCode = 'en', subText = '') {
+    // --- التعديل: الكارت الذكي للترجمة والنطق ---
+    function createCard(itemData, withAudio = false, langCode = 'en', subText = '') {
         const div = document.createElement('div');
         div.className = 'card phrase-card';
         
-        if (subText) {
-            div.innerHTML = `<div style="flex: 1;"><div class="card-text" style="font-weight: 600;">${text}</div><div style="font-size: 0.85rem; color: #999; margin-top: 4px;">${subText}</div></div>`;
+        let mainText = '';
+        let meaningText = '';
+        let pronounceText = '';
+
+        // فحص هل البيانات جاية كنص عادي ولا أوبجكت (زي الإيطالي الجديد)
+        if (typeof itemData === 'object' && itemData !== null) {
+            mainText = itemData.text || '';
+            meaningText = itemData.meaning || subText || '';
+            pronounceText = itemData.pronounce || '';
         } else {
-            div.innerHTML = `<span class="card-text">${text}</span>`;
+            mainText = itemData;
+            meaningText = subText;
         }
+        
+        // بناء الهيكل الداخلي للكارت
+        let contentHTML = `<div style="flex: 1;"><div class="card-text" style="font-weight: 600;">${mainText}</div>`;
+        
+        if (meaningText) {
+            contentHTML += `<div style="font-size: 0.85rem; color: #999; margin-top: 4px;">${meaningText}</div>`;
+        }
+        if (pronounceText) {
+            contentHTML += `<div style="font-size: 0.8rem; color: #4CAF50; font-style: italic; margin-top: 2px;">🗣️ ${pronounceText}</div>`;
+        }
+        
+        contentHTML += `</div>`;
+        div.innerHTML = contentHTML;
         
         const actionsDiv = document.createElement('div');
         actionsDiv.className = 'action-buttons';
@@ -446,30 +482,33 @@ document.addEventListener('DOMContentLoaded', () => {
             const speakBtn = document.createElement('button');
             speakBtn.className = 'icon-btn speak-btn';
             speakBtn.innerHTML = '🔊';
-            // Pass the correct language code to speakText
-            speakBtn.onclick = (e) => { e.stopPropagation(); speakText(text, langCode); };
+            speakBtn.onclick = (e) => { e.stopPropagation(); speakText(mainText, langCode); };
             actionsDiv.appendChild(speakBtn);
         }
 
         const copyBtn = document.createElement('button');
         copyBtn.className = 'icon-btn copy-btn';
         copyBtn.innerHTML = '📋';
-        copyBtn.onclick = (e) => { e.stopPropagation(); copyToClipboard(text); };
+        copyBtn.onclick = (e) => { e.stopPropagation(); copyToClipboard(mainText); };
         actionsDiv.appendChild(copyBtn);
 
         div.appendChild(actionsDiv);
         return div;
     }
 
+    // --- التعديل: فلتر الأقواس في دالة النطق ---
     function speakText(text, lang) {
         // 1. Stop any current speech
         window.speechSynthesis.cancel();
 
+        // تنظيف النص من أي شيء بين الأقواس ()
+        const cleanText = text.replace(/\([^)]*\)/g, '').trim();
+
         // 2. Define the target language code clearly
         const targetLang = TTS_CODES[lang] || 'en-US';
 
-        // 3. Setup the utterance
-        const utterance = new SpeechSynthesisUtterance(text);
+        // 3. Setup the utterance with the cleaned text
+        const utterance = new SpeechSynthesisUtterance(cleanText);
         utterance.lang = targetLang; // This alone helps iOS sometimes
         utterance.rate = 0.9; // Slightly slower is better for learning
 

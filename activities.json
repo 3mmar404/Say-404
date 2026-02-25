@@ -1,333 +1,229 @@
 {
   "categories": [
     {
-      "id": "step_aerobics",
-      "title": "Step Aerobics",
-      "icon": "🏃",
-      "description": "High-energy cardio using a raised platform. 32-Count System.",
-      "bpm_range": "128 - 132 BPM",
+      "id": "stretching_reflexology",
+      "title": "Stretching & Reflexology 🧘‍♂️",
+      "icon": "💆‍♂️",
+      "description": "روتين 30 دقيقة (Relaxing). شامل الكلمات الافتتاحية، العدّات، ولمسة المساج.",
+      "bpm_range": "Zen / Chillout (صوت واطي جداً)",
       "sections": [
         {
           "type": "moves",
-          "title": "Core Moves & Vocabulary",
+          "title": "1. الافتتاحية والتنفس (Intro & Breathing) - 3 دقايق",
           "items": [
             {
-              "name": "Basic Step",
-              "description": "Up Right, Up Left, Down Right, Down Left.",
-              "cue": "Up, Up, Down, Down / Sali, Sali, Scendi, Scendi"
+              "name": "بداية السيشن (الترحيب)",
+              "description": "قف قدامهم، شغل المزيكا الهادية، وابدأ بصوت هادي ومريح.",
+              "cue": "Buongiorno a tutti. Benvenuti allo stretching. Rilassatevi, dimenticate lo stress."
             },
             {
-              "name": "V-Step",
-              "description": "Step Wide Right, Step Wide Left, In Right, In Left (Arms in 'V' shape).",
-              "cue": "Open, Open, Close, Close / Apri, Apri"
-            },
-            {
-              "name": "Knee Lift (Repeater)",
-              "description": "Step up, lift knee, step down. Can be single or 3x repeater.",
-              "cue": "Knee Up! / Ginocchio Su!"
-            },
-            {
-              "name": "L-Step",
-              "description": "Step up corner, knee lift side, exit side (L Shape).",
-              "cue": "L-Step / Passo a L"
-            },
-            {
-              "name": "Turn Step",
-              "description": "Step up side, turn body, step down.",
-              "cue": "Turn / Gira"
-            },
-            {
-              "name": "Over the Top",
-              "description": "Walk laterally over the bench.",
-              "cue": "Over the top / Dall'altra parte"
-            },
-            {
-              "name": "Mambo",
-              "description": "Rock forward on the floor/bench, recover, step back.",
-              "cue": "Mambo!"
+              "name": "التنفس العميق (Respirazione)",
+              "description": "قفوا مع فتح الرجلين بعرض الكتف. ارفع إيدك لفوق مع الشهيق، ونزلها مع الزفير. (كرر 4 مرات).",
+              "cue": "Inspirate profondamente (su le braccia)... ed espirate (giù le braccia)."
             }
           ]
         },
         {
           "type": "moves",
-          "title": "Standard Combos",
+          "title": "2. الرقبة والأكتاف (Collo e Spalle) - 5 دقايق",
           "items": [
             {
-              "name": "Beginner Combo (32 Counts)",
-              "description": "2x Basic (R), 2x V-Step, 3x Knee Repeater, March.",
-              "cue": "Listen to the beat / Ascolta il ritmo"
-            }
-          ]
-        },
-        {
-          "type": "music",
-          "title": "Step Music Playlist",
-          "items": [
-            { "title": "Physical", "artist": "Dua Lipa", "bpm": 130, "usage": "Combo" },
-            { "title": "Destination Calabria", "artist": "Alex Gaudino", "bpm": 128, "usage": "High Energy" },
-            { "title": "Call on Me", "artist": "Eric Prydz", "bpm": 126, "usage": "Standard" },
-            { "title": "Levels", "artist": "Avicii", "bpm": 126, "usage": "Standard" },
-            { "title": "Infinity", "artist": "Jaymes Young Remix", "bpm": 125, "usage": "Cool Down/Warm Up" }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "stretching",
-      "title": "Stretching & Relax",
-      "icon": "🧘",
-      "description": "Morning start or cool down. Focus on flexibility and breathing.",
-      "bpm_range": "60 - 90 BPM (Chill)",
-      "sections": [
-        {
-          "type": "moves",
-          "title": "Routine Flow",
-          "items": [
-            {
-              "name": "Neck Release",
-              "description": "Gently tilt head ear-to-shoulder. Hold 15s each side.",
-              "cue": "Relax shoulders / Rilassa le spalle"
+              "name": "يمين وشمال (الرقبة)",
+              "description": "بص يمين ببطء واثبت 5 ثواني، وبعدين شمال 5 ثواني. (كرر مرتين لكل جهة).",
+              "cue": "Girate la testa a destra... teniamo 5 secondi... e a sinistra."
             },
             {
-              "name": "Shoulder Roll",
-              "description": "Roll shoulders back 10x, then forward 10x.",
-              "cue": "Big circles / Cerchi grandi"
+              "name": "نص دايرة (الرقبة)",
+              "description": "نزل دقنك لصدرك، واعمل نص دايرة لليمين، وبعدين للشمال ببطء جداً. (4 عدات).",
+              "cue": "Mezzo cerchio in basso... lentamente, non fate cerchi completi."
             },
             {
-              "name": "Side Reach",
-              "description": "One arm up, lean to opposite side. Feel the rib stretch.",
-              "cue": "Reach high / Tocca il cielo"
+              "name": "دوران الأكتاف (Spalle)",
+              "description": "لف كتافك لورا 8 عدات، وبعدين لقدام 8 عدات.",
+              "cue": "Ruotate le spalle indietro... 1, 2, 3... e ora in avanti."
             },
             {
-              "name": "Hamstring Stretch",
-              "description": "One leg forward, heel down, lean forward from hips.",
-              "cue": "Keep back straight / Schiena dritta"
-            },
-            {
-              "name": "Child's Pose",
-              "description": "Kneel on floor, reach arms forward on ground.",
-              "cue": "Breathe deep / Respira profondo"
-            }
-          ]
-        },
-        {
-          "type": "music",
-          "title": "Chill Playlist",
-          "items": [
-            { "title": "Weightless", "artist": "Marconi Union", "bpm": 60, "usage": "Deep Relax" },
-            { "title": "Sunset Lover", "artist": "Petit Biscuit", "bpm": 90, "usage": "Flow" },
-            { "title": "River Flows in You", "artist": "Yiruma", "bpm": 65, "usage": "Piano Mood" },
-            { "title": "Sunrise", "artist": "Norah Jones", "bpm": 70, "usage": "Morning" }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "zumba_fitness",
-      "title": "Zumba Fitness",
-      "icon": "💃",
-      "description": "Dance fitness based on Latin rhythms. Non-verbal cueing.",
-      "bpm_range": "130 avg",
-      "sections": [
-        {
-          "type": "moves",
-          "title": "Core Rhythms",
-          "items": [
-            {
-              "name": "Merengue (The March)",
-              "description": "Fast feet, stiff upper body, military march beat (1-2-1-2).",
-              "cue": "March, Beto Shuffle"
-            },
-            {
-              "name": "Salsa (The Flow)",
-              "description": "Side-to-side, loose hips, sensual (1-2-3... 5-6-7).",
-              "cue": "Side-to-Side, Travel"
-            },
-            {
-              "name": "Reggaeton (The Power)",
-              "description": "Urban, heavy bass, aggressive attitude.",
-              "cue": "Stomp, Body Roll, Destroza"
-            },
-            {
-              "name": "Cumbia (The Folk)",
-              "description": "Colombian folk, one leg stays planted.",
-              "cue": "Sleepy Leg, Sugar Cane"
+              "name": "إطالة الكتف والتراي (Braccia)",
+              "description": "اسحب ذراعك اليمين ناحية صدرك واثبت 10 ثواني، وبعدين الذراع التاني.",
+              "cue": "Tirate il braccio destro verso il petto... teniamo per 10 secondi. Cambio braccio."
             }
           ]
         },
         {
           "type": "moves",
-          "title": "Visual Cues (Hand Signals)",
-          "items": [
-            { "name": "Patting Head", "description": "Start from the top / Start again", "cue": "Top" },
-            { "name": "Pointing 2 Fingers", "description": "Do this move 2 times", "cue": "x2" },
-            { "name": "Hand on Ear", "description": "Listen to music / Change coming", "cue": "Listen" },
-            { "name": "Circular Motion", "description": "Turn around", "cue": "Turn" }
-          ]
-        },
-        {
-          "type": "music",
-          "title": "Zumba Playlist",
-          "items": [
-            { "title": "Danza Kuduro", "artist": "Don Omar", "bpm": 130, "usage": "Core" },
-            { "title": "Despacito (Remix)", "artist": "Luis Fonsi", "bpm": 90, "usage": "Cool Down" },
-            { "title": "Tacata", "artist": "Tacabro", "bpm": 130, "usage": "Standard" },
-            { "title": "Fireball", "artist": "Pitbull", "bpm": 128, "usage": "Standard" },
-            { "title": "Pepas", "artist": "Farruko", "bpm": 130, "usage": "Party Anthem" },
-            { "title": "Vivir Mi Vida", "artist": "Marc Anthony", "bpm": 100, "usage": "Salsa" }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "aqua_gym",
-      "title": "Aqua Gym",
-      "icon": "🌊",
-      "description": "Water resistance training. High volume, simple moves.",
-      "bpm_range": "120 - 130",
-      "sections": [
-        {
-          "type": "moves",
-          "title": "Safety Rules",
-          "items": [
-            { "name": "Deck Position", "description": "Instructor must stand on the pool deck (visible).", "cue": "Safety" },
-            { "name": "No Entry", "description": "Do not enter water unless necessary.", "cue": "Safety" },
-            { "name": "Clear Demo", "description": "Demonstrate moves clearly from above.", "cue": "Visuals" }
-          ]
-        },
-        {
-          "type": "moves",
-          "title": "Core Water Moves",
+          "title": "3. الجذع والوسط (Tronco e Fianchi) - 5 دقايق",
           "items": [
             {
-              "name": "Cardio Moves",
-              "description": "High Knees, Jumping Jacks, Cross-Country Ski, Kick & Clap.",
-              "cue": "Faster! / Più veloce!"
+              "name": "الميل الجانبي (Side Stretch)",
+              "description": "ارفع إيدك اليمين وميل بجذعك للشمال ببطء لفتح القفص الصدري. اثبت 10 ثواني لكل جهة.",
+              "cue": "Braccio destro su, piegatevi a sinistra... allungate bene il lato. Cambio."
             },
             {
-              "name": "Strength Moves",
-              "description": "Water Boxing (Jab/Cross/Uppercut), Twist Jumps.",
-              "cue": "Punch the water / Colpisci l'acqua"
-            },
-            {
-              "name": "Tool Work",
-              "description": "Using noodles/dumbbells. Push/Pull.",
-              "cue": "Resistance"
-            },
-            {
-              "name": "The Wave",
-              "description": "Guest interaction circle.",
-              "cue": "Splash!"
+              "name": "تويست للعمود الفقري (Twist)",
+              "description": "إيدك على وسطك، ولف الجذع يمين واثبت، وبعدين شمال. (8 عدات تبادلية).",
+              "cue": "Mani sui fianchi, giriamo il busto a destra... e a sinistra."
             }
           ]
         },
         {
-          "type": "music",
-          "title": "Aqua Playlist",
+          "type": "moves",
+          "title": "4. الرجلين على المات (Gambe a terra) - 10 دقايق",
           "items": [
-            { "title": "I'm Good (Blue)", "artist": "David Guetta", "bpm": 128, "usage": "Standard" },
-            { "title": "Cold Heart", "artist": "Elton John", "bpm": 120, "usage": "Warm Up" },
-            { "title": "Cake by the Ocean", "artist": "DNCE", "bpm": 124, "usage": "Fun" },
-            { "title": "Cheap Thrills", "artist": "Sia", "bpm": 90, "usage": "Cooldown" }
+            {
+              "name": "النزول على الأرض",
+              "description": "اطلب منهم يقعدوا على المات (المنشفة) بهدوء.",
+              "cue": "Ora sediamoci sul tappetino, lentamente."
+            },
+            {
+              "name": "إطالة الخلفيات (Hamstrings)",
+              "description": "افرد الرجلين لقدام، وحاول تلمس مشط رجلك من غير ما تتني ركبك. اثبت 15 ثانية.",
+              "cue": "Gambe dritte, cerchiamo di toccare la punta dei piedi... giù la testa, respirate."
+            },
+            {
+              "name": "الفراشة (Farfalla)",
+              "description": "ضم باطن القدمين على بعض، واضغط على ركبك لتحت بلطف. اثبت 15 ثانية.",
+              "cue": "Piedi uniti (a farfalla), spingiamo le ginocchia verso il basso."
+            }
+          ]
+        },
+        {
+          "type": "moves",
+          "title": "5. الريفليكسولوجي والختام (Relax e Reflexology) - 7 دقايق",
+          "items": [
+            {
+              "name": "وضع الجثة (Savasana)",
+              "description": "اطلب منهم يناموا على ظهرهم ويغمضوا عينيهم. وطي المزيكا أكتر.",
+              "cue": "Sdraiatevi sulla schiena. Chiudete gli occhi. Rilassate ogni muscolo del vostro corpo."
+            },
+            {
+              "name": "الريفليكسولوجي الذاتي (Acupressure)",
+              "description": "علمهم يضغطوا بإبهامهم على منتصف باطن الإيد بحركة دائرية لتقليل التوتر. (دقيقة).",
+              "cue": "Con il pollice, massaggiate il centro del palmo dell'altra mano. Aiuta a togliere lo stress."
+            },
+            {
+              "name": "لمسة الكابتن (Guest Contact)",
+              "description": "لف بينهم، لو حد رقبته أو كتافه مشدودة، اعمل له ضغطة خفيفة (مساج) بإيدك على كتفه.",
+              "cue": "(بصوت واطي لكل شخص): Va bene così? Ti senti rilassato?"
+            },
+            {
+              "name": "إنهاء السيشن",
+              "description": "اطلب منهم يفتحوا عينيهم ويقوموا ببطء. وسقف لهم. (هنا تطلب ريفيو تريب أدفايزر).",
+              "cue": "Lentamente, aprite gli occhi. Mettetevi seduti. Un grande applauso per voi! Grazie a tutti!"
+            }
           ]
         }
       ]
     },
     {
-      "id": "mini_disco",
-      "title": "Mini Disco (Kids)",
-      "icon": "👶",
-      "description": "Repetitive moves, big smiles, parental involvement. 20:30 PM.",
-      "bpm_range": "Variable",
+      "id": "sports_bocce",
+      "title": "Bocce (French Boules) 🎱",
+      "icon": "🎯",
+      "description": "لعبة الطليان المفضلة على البحر. بتحتاج تركيز وقوانين صارمة لأنهم بياخدوها بجدية.",
+      "bpm_range": "Chill / Social",
       "sections": [
         {
-          "type": "moves",
-          "title": "Standard Routine Flow",
+          "type": "safety",
+          "title": "القوانين والتشكيل (Regole)",
           "items": [
-            { "name": "1. Intro", "description": "Hotel Signature Song / Cartoon Heroes", "cue": "Welcome!" },
-            { "name": "2. Warm-Up", "description": "Chu Chu Wa (Forward, Back, Choo Choo)", "cue": "Arms!" },
-            { "name": "3. Viral Hit", "description": "Baby Shark (Show me your fins!)", "cue": "Baby!" },
-            { "name": "4. The Classic", "description": "Veo Veo (Hand on eyes, hips)", "cue": "What do you see?" },
-            { "name": "5. The Train", "description": "A Ram Sam Sam (Conga line)", "cue": "Train!" },
-            { "name": "6. Action", "description": "Head, Shoulders, Knees & Toes", "cue": "Speed up!" },
-            { "name": "7. Closing", "description": "Slow Song / Lullaby", "cue": "Goodnight" }
+            "الفرق (Squadre): اللعب بيكون 1 ضد 1، أو 2 ضد 2، أو 3 ضد 3 (أقصى حاجة).",
+            "الكور: كل لاعب بياخد كرتين (أو 3 لو اللعب 1 ضد 1).",
+            "الهدف (Il Pallino): بنرمي الكورة الصغيرة (البالينو) الأول لمسافة من 6 لـ 10 متر.",
+            "الفوز (Punteggio): الفريق اللي يوصل لـ 12 نقطة بيكسب الماتش.",
+            "حساب النقط: الفريق اللي كورته أقرب للبالينو بياخد نقطة (أو أكتر لو عنده كذا كورة أقرب من أقرب كورة للخصم)."
           ]
         },
         {
           "type": "moves",
-          "title": "Themed Days",
+          "title": "مصطلحات التحكيم (Arbitraggio)",
           "items": [
-            { "name": "Pirate Day", "description": "Treasure hunt, face painting.", "cue": "Arrrgh!" },
-            { "name": "Pharaoh Day", "description": "Mummy wrapping contest.", "cue": "Egypt" },
-            { "name": "Pizza Party", "description": "Cooking with the chef.", "cue": "Yummy" }
-          ]
-        },
-        {
-          "type": "music",
-          "title": "Essential Hits",
-          "items": [
-            { "title": "Baby Shark", "artist": "Pinkfong", "bpm": 115, "usage": "All ages" },
-            { "title": "Veo Veo", "artist": "Hot Banditoz", "bpm": 130, "usage": "Interactive" },
-            { "title": "Chuchuwa", "artist": "Piñón Fijo", "bpm": 130, "usage": "Action" },
-            { "title": "Ram Sam Sam", "artist": "Mini Disco", "bpm": 140, "usage": "Fast" },
-            { "title": "Superman", "artist": "Black Lace", "bpm": 125, "usage": "Classic" }
+            {
+              "name": "ترتيب اللعب",
+              "description": "الفريق اللي كورته أبعد عن الهدف هو اللي بيرمي لحد ما يقرب، أو يخلص كوره.",
+              "cue": "Tocca alla squadra rossa. Siete più lontani."
+            },
+            {
+              "name": "الفاول (الخط)",
+              "description": "ممنوع اللاعب يتخطى خط الرمي المرسوم على الرملة قبل ما الكورة تلمس الأرض.",
+              "cue": "Attenzione alla linea! Non superate la linea."
+            },
+            {
+              "name": "القياس عند الشك",
+              "description": "لو الكورتين نفس المسافة، الأنيماتور بيقيس بالشبر أو بخيط. (ده بيعمل جو ضحك).",
+              "cue": "Aspettate, misuriamo! Chi è più vicino?"
+            }
           ]
         }
       ]
     },
     {
-      "id": "shows_skills",
-      "title": "Shows & Skills",
-      "icon": "🎭",
-      "description": "Night life performance protocols.",
-      "bpm_range": "N/A",
+      "id": "sports_volleyball",
+      "title": "Beach Volleyball 🏐",
+      "icon": "🏐",
+      "description": "نشاط الطاقة والتنافس. دورك هنا حكم، ومعلق رياضي بيسخن الماتش.",
+      "bpm_range": "High Energy",
       "sections": [
         {
-          "type": "moves",
-          "title": "Fire Show Protocols",
+          "type": "safety",
+          "title": "القوانين والتشكيل (Regole)",
           "items": [
-            { "name": "Fuel", "description": "Kerosene or Paraffin Oil only (NO Gasoline).", "cue": "Safety" },
-            { "name": "Clothing", "description": "100% Cotton or Denim (No Polyester).", "cue": "Safety" },
-            { "name": "Spotter", "description": "Must have wet towel and extinguisher nearby.", "cue": "Mandatory" }
+            "الفرق (Squadre): من 4 ضد 4 لحد 6 ضد 6. (حاول توزع اللعيبة الكويسين على الفريقين).",
+            "عدد اللمسات: 3 لمسات كحد أقصى لكل فريق قبل عبور الشبكة.",
+            "النقاط (Punteggio): الماتش بيتلعب لـ 15 نقطة أو 21 نقطة (حسب الزحمة). ولازم فارق نقطتين للفوز.",
+            "تبديل الملعب (Cambio Campo): بيحصل تبديل للملعب لما مجموع النقط يوصل 7 أو 11 (عشان الشمس والهوا)."
           ]
         },
         {
           "type": "moves",
-          "title": "Inline Skating",
+          "title": "مصطلحات التحكيم (Arbitraggio)",
           "items": [
-            { "name": "Gear Specs", "description": "Hard wheels (85A/90A) for rough tiles.", "cue": "Maintenance" },
-            { "name": "Theme", "description": "Roller Disco Nostalgia.", "cue": "Style" }
-          ]
-        },
-        {
-          "type": "music",
-          "title": "Show Music",
-          "items": [
-            { "title": "Bangarang", "artist": "Skrillex", "bpm": 0, "usage": "Fire Show" },
-            { "title": "Sail", "artist": "AWOLNATION", "bpm": 0, "usage": "Fire Show" },
-            { "title": "Conquest of Paradise", "artist": "Vangelis", "bpm": 0, "usage": "Fire Show" },
-            { "title": "Daddy Cool", "artist": "Boney M", "bpm": 125, "usage": "Skating" }
+            {
+              "name": "الشبكة (Rete)",
+              "description": "فاول: ممنوع لمس الشبكة بالجسم أثناء اللعب.",
+              "cue": "Fallo! Hai toccato la rete. Punto per loro."
+            },
+            {
+              "name": "تخطي الخط (Invasione)",
+              "description": "فاول: الدخول بالرجل بالكامل في ملعب الخصم تحت الشبكة.",
+              "cue": "Invasione di campo! Punto perso."
+            },
+            {
+              "name": "الإرسال والنتيجة",
+              "description": "لازم تعلن النتيجة قبل كل إرسال بصوت عالي.",
+              "cue": "Cinque a tre! Servizio per la squadra blu."
+            }
           ]
         }
       ]
     },
     {
-      "id": "master_playlist",
-      "title": "Master Playlist",
+      "id": "club_dance",
+      "title": "Club Dance (Animation Classics) 🕺",
       "icon": "🎵",
-      "description": "Combined database of all animation tracks.",
-      "bpm_range": "Mixed",
+      "description": "الرقصات الأساسية اللي بتتعمل كل يوم الصبح وبالليل.",
+      "bpm_range": "100 - 130 BPM (عدات 4 و 8)",
       "sections": [
         {
-          "type": "music",
-          "title": "All Songs",
+          "type": "playlist",
+          "title": "قائمة رقصات الأنيميشن (دوس للتدريب)",
           "items": [
-            { "title": "Physical", "artist": "Dua Lipa", "bpm": 130, "usage": "Step" },
-            { "title": "Danza Kuduro", "artist": "Don Omar", "bpm": 130, "usage": "Zumba" },
-            { "title": "Level Up", "artist": "Ciara", "bpm": 130, "usage": "Aqua" },
-            { "title": "Hips Don't Lie", "artist": "Shakira", "bpm": 0, "usage": "Show" },
-            { "title": "Jerusalema", "artist": "Master KG", "bpm": 124, "usage": "Group Dance" },
-            { "title": "Soco Bate Vira", "artist": "Xuxa", "bpm": 0, "usage": "Kids" }
+            { "title": "La Bomba", "artist": "King Africa", "usage": "Warmup / Fun" },
+            { "title": "Opa Opa", "artist": "Antique", "usage": "Classic Dance" },
+            { "title": "C'est la vie", "artist": "Khaled", "usage": "High Energy" },
+            { "title": "Sofia", "artist": "Alvaro Soler", "usage": "Latin Vibe" },
+            { "title": "I Gotta Feeling", "artist": "Black Eyed Peas", "usage": "Night / Disco" },
+            { "title": "Danza Kuduro", "artist": "Don Omar", "usage": "Party Anthem" },
+            { "title": "Macarena", "artist": "Los Del Rio", "usage": "Easy Steps" },
+            { "title": "La Colita", "artist": "Soca Boys", "usage": "Fun / Line Dance" },
+            { "title": "Danza Dell'Ombelico", "artist": "Yara Yara", "usage": "Belly Dance Vibe" }
+          ]
+        },
+        {
+          "type": "safety",
+          "title": "أسرار الـ Club Dance",
+          "items": [
+            "الرقصات مش موحدة 100%: كل رئيس فريق بيحط التاتش بتاعه، عينك عليه دايماً.",
+            "الابتسامة أهم من الخطوة: لو اتلخبطت في الـ 8 عدات، اضحك وكمل ولا كأن حاجة حصلت.",
+            "استخدم الإشارات: شاور بإيدك قبل ما تغير الحركة عشان الجيست يلحق يقلدك."
           ]
         }
       ]
