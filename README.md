@@ -4,7 +4,44 @@
 
 **Say 404** is a Progressive Web App (PWA) designed to help animation teams break language barriers and manage daily activities efficiently. Whether you need a script in Italian, a stretching routine, or a quick Zumba playlist, Say 404 has you covered—even offline.
 
-🔗 **Live Demo:** [https://3mmar404.github.io/Say-404/]
+🔗 **Live Demo:** [https://3mmar404.github.io/Say-404/](https://3mmar404.github.io/Say-404/)
+
+## 📸 Screenshots
+
+<div align="center">
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="screenshots/01-scripts.png" width="235" alt="Scripts Hub" /><br />
+      <sub><b>💬 Scripts Hub</b><br />Categorized scripts, ready on tap</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="screenshots/02-phrases.png" width="235" alt="Instant Phrases" /><br />
+      <sub><b>🗣️ Instant Phrases</b><br />Tap to hear or copy any line</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="screenshots/03-languages.png" width="235" alt="Five Languages" /><br />
+      <sub><b>🌍 5 Languages</b><br />Switch instantly (Italian shown)</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <img src="screenshots/04-activities.png" width="235" alt="Activity Hub" /><br />
+      <sub><b>💃 Activity Hub</b><br />Move-by-move guides &amp; music cues</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="screenshots/05-library.png" width="235" alt="Smart Library" /><br />
+      <sub><b>📚 Smart Library</b><br />Hundreds of categorized phrases</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="screenshots/06-notes.png" width="235" alt="Personal Notes" /><br />
+      <sub><b>📝 Personal Notes</b><br />Save your own phrases locally</sub>
+    </td>
+  </tr>
+</table>
+
+</div>
 
 ## ✨ Key Features
 
